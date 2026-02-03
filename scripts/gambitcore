@@ -185,7 +185,7 @@ def main():
         closest_accession, closest_distance, rank = run_gambit_core_check(options.gambit_directory, fasta_filename, options.cpus)
 
         # check if a species-level is being made. Options: genus, species and species group
-        if 'species' in rank:
+        if rank and 'species' in rank:
 
             # create a core just of that species
             db_queries = DatabaseQueries(database_filename)
